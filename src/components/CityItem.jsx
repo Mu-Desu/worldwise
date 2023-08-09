@@ -11,11 +11,15 @@ const formatDate = (date) =>
 // eslint-disable-next-line react/prop-types
 function CityItem({ city }) {
   // eslint-disable-next-line react/prop-types
-  const { cityName, emoji, date, id } = city;
+  const { cityName, emoji, date, id, position } = city;
 
   return (
     <li>
-      <Link className={styles.cityItem} to={`${id}`}>
+      <Link
+        className={styles.cityItem}
+        //  eslint-disable-next-line react/prop-types
+        to={`${id}?lat=${position.lat}&lng=${position.lat}`}
+      >
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
         <time className={styles.date}>{formatDate(date)}</time>
