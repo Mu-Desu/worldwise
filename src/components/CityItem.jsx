@@ -22,7 +22,7 @@ function CityItem({ city }) {
           id === currentCity.id ? styles["cityItem--active"] : ""
         }`}
         //  eslint-disable-next-line react/prop-types
-        to={`${id}?lat=${position.lat}&lng=${position.lat}`}
+        to={`${id}?lat=${position.lat}&lng=${position.lng}`}
       >
         <span className={styles.emoji}>{emoji}</span>
         <h3 className={styles.name}>{cityName}</h3>
