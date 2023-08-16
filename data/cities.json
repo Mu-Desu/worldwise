@@ -37,18 +37,6 @@
       "id": 98443197
     },
     {
-      "cityName": "Campan",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2023-08-15T19:26:24.321Z",
-      "notes": "fghf",
-      "position": {
-        "lat": "43.004647127794435",
-        "lng": "0.19775390625000003"
-      },
-      "id": 98443198
-    },
-    {
       "cityName": "Bijuesca",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -61,18 +49,6 @@
       "id": 98443199
     },
     {
-      "cityName": "Mosqueruela",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-08-15T19:32:19.729Z",
-      "notes": "haha",
-      "position": {
-        "lat": "40.38002840251183",
-        "lng": "-0.3515625"
-      },
-      "id": 98443200
-    },
-    {
       "cityName": "Cordoba",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -83,18 +59,6 @@
         "lng": "-4.592285156250001"
       },
       "id": 98443201
-    },
-    {
-      "cityName": "Miranda do Douro",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2023-08-15T19:35:24.934Z",
-      "notes": "hell yea",
-      "position": {
-        "lat": "41.672911819602085",
-        "lng": "-6.372070312500001"
-      },
-      "id": 98443202
     }
   ]
 }
