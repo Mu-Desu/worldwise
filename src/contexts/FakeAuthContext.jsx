@@ -4,16 +4,16 @@ const AuthContext = createContext();
 
 const initialState = {
   user: null,
-  isAuthinticated: false,
+  isAuthenticated: false,
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "login":
-      return { ...state, user: action.payload, isAuthinticated: true };
+      return { ...state, user: action.payload, isAuthenticated: true };
 
     case "logout":
-      return { ...state, user: null, isAuthinticated: false };
+      return { ...state, user: null, isAuthenticated: false };
 
     default:
       throw new Error("Uknown action");
@@ -29,7 +29,7 @@ const FAKE_USER = {
 
 //eslint-disable-next-line react/prop-types
 function AuthProvider({ children }) {
-  const [{ user, isAuthinticated }, dispatch] = useReducer(
+  const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
     initialState
   );
@@ -44,16 +44,17 @@ function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={(user, isAuthinticated, login, logout)}>
+    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
 }
 
 function useAuth() {
-  const context = useContext({ AuthContext });
+  const context = useContext(AuthContext);
   if (context === undefined)
     throw new Error("AuthContext was used outside AuthProvider");
+  return context;
 }
 
 export { AuthProvider, useAuth };
