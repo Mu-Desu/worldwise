@@ -23,7 +23,7 @@ function City() {
     function () {
       getCity(id);
     },
-    [id]
+    [id, getCity]
   );
 
   // eslint-disable-next-line react/prop-types
